@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .orange ~ li{
+            color: red;
+        }
+        a:hover{
+            font-weight: bold;
+            font-size: 1.5em;
+        }
+        .box:hover{
+            width: 100px;
+            background: green;
+        }
+        .box{
+            width: 50px;
+            height: 50px;
+            background: red;
+            transition: 0.4s;
+        }
+        .box:active{
+            width: 100px;
+            background: rgb(98, 0, 128);
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>딸기</li>
+        <li>수박</li>
+        <li class="orange">오렌지</li>
+        <li>망고</li>
+        <li>사과</li>
+    </ul>
+    <a href="http://google.com">Google!</a>
+    <div class="box">1</div>
+    <div class="box">2</div>
+</body>
+</html>
