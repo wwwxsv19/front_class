@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>awesome cat</title>
+</head>
+<body>
+    <h1>멋진 고양이</h1>
+    <button id= - "on" onclick="turnOn()">Turn on</button>
+    <img id="myImage" src="./cat0.jpg" style="width:100px">
+    <button id="off" onclick="turnOff()">Turn Off</button>
+    <script>
+        onBtn = document.getElementById("on");
+        offBtn = document.getElementById("off");
+        lightImg = document.getElementById("myImage");
+        function turnOn(){
+            lightImg.src = "./cat1.jpg";
+        }
+        function turnOff(){
+            lightImg.src = "./cat0.jpg"
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <style>h3{color: red};</style>
+    <title>DOM예제</title>
+</head>
+<body>
+    <button onclick="textContent()">textContent로 표시</button>
+    <button onclick="innerHTML()">innerHTML로 표시</button>
+    <h1>현재 시각 : </h1>
+    <div id="current"></div>
+
+    <script>
+        let now = new Date();
+        let $curDiv = document.getElementById("current");
+        function txtCtent(){
+            $curDiv.textContent = now;
+        }
+        function innhtml(){
+            $curDiv.innerHTML = '<h3>'+ now +'</h3>';
+        }
+    </script>
+</body>
+</html>

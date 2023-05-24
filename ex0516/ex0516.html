@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM 예제</title>
+    <style>
+        .highlight{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <button id="myButton">클릭하세요!</button>
+    <h1>첫 번째 제목</h1>
+    <h1>두 번째 제목</h1>
+    <h2>세 번째 제목</h2>
+    <h2>네 번째 제목</h2>
+    <h3>다섯 번째 제목</h3>
+    <h3>여섯 번째 제목</h3>
+    <script>
+        const button = document.getElementById("myButton");
+        button.addEventListener("click", function(){
+            button.textContent="클릭되었습니다.";
+            const hbutton = document.querySelectorAll("h1");
+            for(let i=0; i < hbutton.length; i++){
+                hbutton[i].classList.add("highlight");
+            }
+        });
+    </script>
+</body>
+</html>

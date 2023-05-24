@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM 예제</title>
+</head>
+<body>
+    <button id="myButton">클릭하세요</button>
+    <button id="myButton2">클릭하세요</button>
+    <button id="myButton3">클릭하세요</button>
+    <script>
+        //버튼 요소 가져오기
+        const button = document.getElementById("myButton");
+        //클릭 이벤트 리스너 등록
+        button.addEventListener("click", function() { 
+            button.textContent = "클릭되었습니다!";
+        });
+        const button2 = document.getElementById("myButton2");
+        button2.addEventListener("click", function() {
+            button2.style.color="red";
+        });
+        const button3 = document.getElementById("myButton3");
+        button3.addEventListener("click", function() {
+            document.write("클릭되었습니다.");
+        });
+    </script>
+</body>
+</html>

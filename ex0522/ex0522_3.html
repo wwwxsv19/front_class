@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>해결1</title>
+    <style>
+        #msg{
+            border: 2px solid royalblue;
+            margin-top: 20px;
+            padding: 20px;
+            width: 300px;
+            height: 100px;
+            box-sizing: border-box;
+            background-color: antiquewhite;
+        }
+        #msg2{
+            border: 2px solid hotpink;
+            margin-top: 20px;
+            padding: 20px;
+            width: 300px;
+            height: 100px;
+            box-sizing: border-box;
+            background-color: lightpink;
+        }
+    </style>
+</head>
+<body>
+    <h1>JavaScript 연습</h1>
+    <form name="form1">
+        <input type="text" name="text1" id="text1" placeholder="값 입력">
+        <input type="button" value="확인" onclick="show();">
+        <input type="reset" value="취소">
+    </form>
+    <div id="msg"></div>
+    <hr>
+    <p id="msg2"></p>
+    <script>
+        function show(){
+            document.getElementById("msg").innerHTML = `${text1.value} 님 안녕하세요!`;
+            document.getElementById("msg2").innerHTML = `${text1.value} 님 오늘도 멋지시네요!`;
+        }
+    </script>
+</body>
+</html>

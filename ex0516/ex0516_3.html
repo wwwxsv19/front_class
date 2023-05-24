@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM 예제</title>
+    <style>
+        .highlight{
+            color: skyblue;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <button id="myButton">클릭하세요!</button>
+    <p>지금 무슨 노래 듣고 계세요?</p>
+    <p> ㄴ 아 저 뉴진스의 하입 보이요</p>
+    <script>
+        let isHighlighted = false;
+        
+        const button = document.getElementById("myButton");
+        button.addEventListener("click", function(){
+            if(isHighlighted){
+                const h1Elements = document.querySelectorAll("h1");
+                for(let i=0; i < h1Elements.length; i++){
+                    h1Elements[i].classList.remove("highlight");
+                }
+                isHighlighted=false;
+            }
+            else{
+                const h1Elements = document.querySelectorAll("h1");
+                for(let i=0; i < h1Elements.length; i++){
+                    h1Elements[i].classList.add("hightlight");
+                }
+                isHighlighted = true;
+            }
+        });
+    </script>
+</body>
+</html>

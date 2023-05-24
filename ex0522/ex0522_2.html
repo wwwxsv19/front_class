@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM 예제</title>
+</head>
+<body>
+    <div id="str">
+        오늘은 비오는 월요일 밤<span style="display:none">저녁은 피자</span>
+    </div>
+
+    <script>
+        function getInnerHTML(){
+            const element = document.getElementById('str');
+            alert(element.innerHTML);
+        }
+        function getInnerTEXT(){
+            const element = document.getElementById('str');
+            alert(element.innerTEXT);
+        }
+        function getInnerContent(){
+            const element = document.getElementById('str');
+            alert(element.innerContent);
+        }
+    </script>
+
+    <input type="button" value="innerHTML" onclick="getInnerHTML()"/>
+    <input type="button" value="innerTEXT" onclick="getInnerTEXT()"/>
+    <input type="button" value="innerContent" onclick="getInnerContent()"/>
+</body>
+</html>
+
+<!-- innerHTML / innerTEXT / inner Content 차이
+innerHTML 요소 내 HTML 과 XML 모두를 의미
+innerTEXT 요소 내 사용자에게 보이는 모든 text 의미
+innerContent script style 태그 등과 상관없이 해당 노드가 가지고 있는 text 의미-->
